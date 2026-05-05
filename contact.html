@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home - Pratham</title>
+  <title>Contact - Pratham</title>
+
+  <!-- favicon fix -->
+  <link rel="icon" href="data:,💻">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
+<nav class="navbar">
+  <h2 class="logo">Pratham</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <div class="container">
-    <h1>Contact Me</h1>
-  
-    <p>Email: prathamarora9f15@gmail.com</p>
-  
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea placeholder="Your Message"></textarea>
-      <button type="button" onclick="showMessage()">Send</button>
-    </form>
-  </div>
+  <h1>Contact Me</h1>
+  <p>Email: prathamarora9f15@gmail.com</p>
+
+  <!-- ✅ BONUS FIX HERE -->
+  <form id="contactForm" action="javascript:void(0);">
+    
+    <input type="text" id="name" placeholder="Your Name" required>
+    
+    <input type="email" id="email" placeholder="Your Email" required>
+    
+    <textarea id="message" placeholder="Type Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="successMsg"></p>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
